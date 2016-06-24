@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="todoListApp">
+    <div ng-controller="TodoListController">
+        {{mensagem}}
+
+        <ul>
+        <li ng-repeat="superThing in itens track by $index">
+            <ol>{{superThing.descricao}}</ol>
+            <button ng-click="remove(superThing.id)">Remover</button>
+        </li>
+      </ul>
+      <input ng-model="descricao">
+      <button ng-click="save()">Salvar</button>
+   </div>
+</body>
+
+</html>
